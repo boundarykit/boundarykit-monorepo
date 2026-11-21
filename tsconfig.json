@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2023","module":"NodeNext","strict":true,"allowImportingTsExtensions":true,"noEmit":true},"include":["src","packages/sdk"]}

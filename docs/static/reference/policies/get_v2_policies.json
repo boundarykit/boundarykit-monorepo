@@ -1,0 +1,60 @@
+{
+  "operationId": "get_v2_policies",
+  "summary": "List policies",
+  "tags": [
+    "policies"
+  ],
+  "parameters": [
+    {
+      "name": "X-Organization-Id",
+      "in": "header",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "cursor",
+      "in": "query",
+      "required": false,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "responses": {
+    "200": {
+      "description": "Request completed.",
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Record"
+            }
+          }
+        }
+      }
+    },
+    "403": {
+      "description": "Scope denied",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/Error"
+          }
+        }
+      }
+    },
+    "503": {
+      "description": "Service unavailable",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/Error"
+          }
+        }
+      }
+    }
+  }
+}

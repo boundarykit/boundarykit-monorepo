@@ -1,0 +1,24 @@
+---
+title: "Get sandbox"
+---
+
+import EndpointCard from "@site/src/components/EndpointCard"
+
+<EndpointCard method="GET" path={"/v2/sandboxes/{id}"} />
+
+Authenticate with the workspace API key.
+
+## Parameters
+
+| Name | Location | Required |
+| --- | --- | --- |
+| `X-Organization-Id` | header | Yes |
+| `id` | path | Yes |
+
+## Responses
+
+- **200** — Request completed.
+- **403** — Scope denied
+- **503** — Service unavailable
+
+[Download the OpenAPI operation](/reference/sandboxes/get_v2_sandboxes_id.json).
